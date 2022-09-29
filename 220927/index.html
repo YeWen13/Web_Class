@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息注册统计表</title>
+</head>
+<style>
+    table {
+        margin: 0 auto;
+        border: 3px #F3F3F3 dashed;
+        background-image: url(./images/bjview.webp);
+    }
+    th,td,input{
+        border: none;
+    }
+    th{
+        color: red;
+    }
+    a{
+        text-decoration: none;
+        color: blue;
+    }
+    ul {
+        margin: 0px -40px;
+    }
+
+    ul li {
+        list-style: none;
+        text-align: left;
+    }
+    .center{
+        text-align: center;
+    }
+
+    table .tableTitle {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 15px;
+    }
+    .sexstyle{
+        cursor: pointer;
+    }
+    .name,.age{
+        width: 50%;
+        border: 1px silver solid;
+        height: 20px;
+        /* 字符缩进 */
+        /* text-indent: 2em; */  
+        text-align: 20px;
+        font-size: 12px;
+        
+    }
+    select {
+        width: 150px;
+        height: 25px;
+    }
+    .aihao{
+        display: inline-block;
+    }
+    textarea {
+        outline: none;
+        scroll-behavior: auto;
+    }
+    .zuo,.you{
+        width: 100px;
+        height: 32px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #D7D7D7;
+        margin-left: 110px;
+    }
+    .zuo:hover{
+        background-color: #23c937cd;
+        color: #fff;
+    }
+    .you:hover{
+        background-color: #EA3323;
+        color: #fff;
+    }
+</style>
+<body>
+    <form action="" method="post">
+    <table>
+        <tr>
+            <th colspan="2" class="tableTitle" >信息注册表-220927</th>
+        </tr>
+        <tr>
+            <td class="center">姓名：</td>
+            <td>
+                <!-- 默认获得焦点 -->
+                <input type="text" class="name" name="userName" autofocus="autofocus" placeholder="请输入你的姓名···">
+            </td>
+        </tr>
+        <tr>
+            <td class="center">年龄：</td>
+            <td>
+                <input type="text" class="age" name="userAge" placeholder="请输入你的年龄···">
+            </td>
+        </tr>
+        <tr>
+            <td class="center">性别：</td>
+            <td>
+                <!-- 默认选中 男 -->
+                <input type="radio" class="sexstyle" name="userSex" id="sexna" value="nan" checked><label for="sexna"><img src="./images/na.jpg" alt="">男士</label>
+                <input type="radio" class="sexstyle" name="userSex" id="sexnv" value="nv"><label for="sexnv"><img src="./images/nv.jpg" alt="">女士</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">生日：</td>
+            <td>
+                <select name="year" id="">
+                    <option>----请选择年份----</option>
+                    <option>year</option>
+                    <option>year</option>
+                    <option>year</option>
+                </select>
+                <select name="month" id="">
+                    <option>----请选择月份----</option>
+                    <option>month</option>
+                    <option>month</option>
+                    <option>month</option>
+                </select>
+                <select name="day" id="">
+                    <option >----请选择日----</option>
+                    <option>day</option>
+                    <option>day</option>
+                    <option>day</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">爱好：</td>
+            <td>
+                <ul>
+                    <li class="aihao"><input class="" value="Travel" type="checkbox">旅游</input></li>
+                    <li class="aihao"><input class="" value="Mountaineering" type="checkbox">登山</input></li>
+                    <li class="aihao"><input class="" value="Bodybuilding" type="checkbox">健身</input></li>
+                    <li class="aihao"><input class="" value="Internet" type="checkbox">上网</input></li>
+                    <li class="aihao"><input class="" value="Swimming" type="checkbox">游泳</input></li>
+                    <li class="aihao">喜欢的颜色：<input class="" value="Swimming" type="color"></input></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">学历：</td>
+            <td>
+                <select name="xueli" id="">
+                    <!-- 默认选中 ----请选择------>
+                    <option value="">专科</option>
+                    <option value="">本科</option>
+                    <option value="">硕/博士</option>
+                    <option value="" selected>----请选择----</option>
+                </select>
+                <input type="file" value="上传证件照">
+            </td>
+        </tr>
+        <tr>
+            <td class="center">自我介绍：</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;">
+                <textarea name="neirong" cols="65" rows="5"  placeholder="简单介绍一下自己吧！！！" >
+                </textarea>
+            </td>
+        </tr>
+        <tr style="text-align:center">
+            <td colspan="2" style="font-size: 12px;"><input type="checkbox">我同意此信息录入<a href="#" style="cursor:help">《信息管理条例》</a></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="zuo" value="立即注册">
+                <input type="reset" value="重新输入" class="you">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
