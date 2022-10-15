@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes spin {
+            0% {
+                background-color: yellow;
+                left: 100px;
+                top: 100px;
+                rotate: 25deg;
+            }
+
+            25% {
+                background-color: green;
+                left: 90%;
+                top: 0px;
+                rotate: 125deg;
+            }
+
+            50% {
+                background-color: skyblue;
+                rotate: 225deg;
+                left: 90%;
+                top: 800px;
+            }
+
+            75% {
+                background-color: rgb(222, 110, 98);
+                rotate: 325deg;
+                top: 800px;
+                left: 0px;
+            }
+
+            100% {
+                background-color: pink;
+                rotate: 360deg;
+                right: 0px;
+                top: 0px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .roat {
+            border-radius: 5%;
+            width: 200px;
+            height: 150px;
+            animation: spin 10s linear infinite;
+            text-align: center;
+            line-height: 150px;
+            background-color: green;
+            color: red;
+            font-size: 32px;
+            font-family: '仿宋', Courier, monospace;
+            position: relative;
+        }
+
+        .center {
+            margin: 200px auto;
+            width: 200px;
+            height: 200px;
+        }
+
+        .student,
+        .visitor {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            transition: padding 1s;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .student {
+            background-color: #d81e06;
+            margin-bottom: 20px;
+
+        }
+
+        .student img,
+        .visitor img {
+            width: 50px;
+            position: absolute;
+        }
+
+        .visitor {
+            background-color: #9c26b0;
+        }
+
+        .text {
+            position: absolute;
+            left: -5px;
+            width: 200px;
+            height: 50px;
+            opacity: 1;
+            text-align: center;
+            line-height: 50px;
+            transition: opacity 1s;
+            color: rgb(250, 250, 250);
+        }
+
+        .student:hover {
+            padding-left: 150px;
+        }
+
+        .visitor:hover {
+            padding-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="roat">CSS动画</div>
+    <div class="center">
+        <div class="student">
+            <a class="text">学生 Stundet</a>
+            <img src="./images/xuesheng.png" alt="">
+        </div>
+        <div class="visitor">
+            <a class="text">访客 Visitor</a>
+            <img src="./images/fangke.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
