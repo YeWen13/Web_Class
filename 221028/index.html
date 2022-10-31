@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .body>div {
+            width: 150px;
+            height: 150px;
+            background-color: #262626;
+            color: #fff;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+        }
+
+        input {
+            margin: 20px 40%;
+            width: 440px;
+            height: 40px;
+        }
+
+        input::placeholder {
+            color: #262626;
+        }
+    </style>
+    <script>
+        function intoGet() {
+            document.getElementById("intoGet").innerHTML = '<img src="./images/1.jpeg" height=112px width=150px>'
+        }
+
+        function departure() {
+            document.getElementById("departure").innerHTML = '<img src="./images/2.webp" height=112px width=150px>'
+        }
+
+        function oneclick() {
+            document.getElementById("oneclick").innerHTML = '<img src="./images/3.webp" height=112px width=150px>'
+        }
+
+        function double_click() {
+            document.getElementById("double_click").innerHTML = '<img src="./images/4.webp" height=112px width=150px>'
+        }
+
+        function change() {
+            confirm("你写了什么东西??")
+        }
+    </script>
+
+<body>
+    <div class="body">
+        <div onmouseover="intoGet()">鼠标进入显示图片 <p id="intoGet"></p>
+        </div>
+        <div onmouseout="departure()">鼠标离开显示图片 <p id="departure"></p>
+        </div>
+        <div onclick="oneclick()">鼠标单击显示图片 <p id="oneclick"></p>
+        </div>
+        <div ondblclick="double_click()">鼠标双击显示图片 <p id="double_click"></p>
+        </div>
+
+    </div><input type="text" onblur="change()" placeholder="请输入···">
+</body>
+<html>
