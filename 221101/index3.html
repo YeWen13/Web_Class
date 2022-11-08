@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td colspan="2"> <input type="text" placeholder="请输入姓名·····" id="name" onblur="panduanname()">
+                    <span id="nametext" style="color: green;font-size: 10px;"></span>
+                    <span id="nameeer" style="color: red;font-size: 10px;"></span>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td colspan="2"> <input type="password" placeholder="请输入密码·····" id="password"
+                        onblur="panduanpassword()">
+                    <span id="passwordtext" style="color: green; font-size: 10px;"></span>
+                    <span id="passwordeer" style="color: red;font-size: 10px;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <input type="radio" name="sex" id="sexnan" value="nan">男
+                    <input type="radio" name="sex" id="sexnv" value="nv">女
+                </td>
+            </tr>
+            <tr>
+                <td>血型</td>
+                <td>
+                    <input type="radio" name="xuexing">A
+                    <input type="radio" name="xuexing">B
+                    <input type="radio" name="xuexing">D
+                    <input type="radio" name="xuexing">E
+                </td>
+            </tr>
+            <tr>
+                <td>性格</td>
+                <td>
+                    <input type="checkbox" name="xingge">热情大方
+                    <input type="checkbox" name="xingge">乐于助人
+                    <input type="checkbox" name="xingge">温柔体贴
+                    <input type="checkbox" name="xingge">多愁善感
+                </td>
+            </tr>
+            <tr>
+                <td>文件</td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    简介
+                </td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="5" placeholder="这个人很懒，什么都没有写·····"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>城市</td>
+                <td>
+                    <select name="" id="">
+                        <option value="成都">成都</option>
+                        <option value="成都">北京</option>
+                        <option value="成都">上海</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">提交
+                        <button type="reset">重置
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function panduanname() {
+        let username = document.getElementById("name").value;
+        if (username != '') {
+            document.getElementById("nametext").innerHTML = "用户名合格！";
+            document.getElementById("nameeer").innerHTML = "";
+        } else {
+            document.getElementById("nameeer").innerHTML = "用户名不合格！";
+            document.getElementById("nametext").innerHTML = "";
+
+        }
+    }
+    function panduanpassword() {
+        let userpassword = document.getElementById("password").value;
+        if (userpassword != '') {
+            document.getElementById("passwordtext").innerHTML = "密码合格！";
+            document.getElementById("passwordeer").innerHTML = "";
+        } else {
+            document.getElementById("passwordeer").innerHTML = "密码不合格！";
+            document.getElementById("passwordtext").innerHTML = "";
+
+        }
+    }
+</script>
+
+</html>

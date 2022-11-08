@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="one">
+        <button id="btn" onclick="buttonClick()">复制</button>
+        <input type="text" id="two">
+        <p id="text" style="color: red;"></p>
+    </div>
+</body>
+<script>
+    function buttonClick() {
+        let oneVlue = document.getElementById("one").value;
+        document.getElementById("two").value = oneVlue;
+        document.getElementById("text").innerHTML = "复制成功";
+    }
+</script>
+
+</html>
