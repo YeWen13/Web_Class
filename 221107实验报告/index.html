@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .track {
+            position: absolute;
+            width: 500px;
+            height: 450px;
+            left: 50%;
+            top: 200px;
+            margin-left: -225px;
+
+        }
+
+        .trackOne {
+
+            position: relative;
+            width: 500px;
+            height: 400px;
+            background-color: #F6F6F6;
+            z-index: 2;
+
+        }
+
+        .trackTwo {
+            width: 450px;
+            height: 350px;
+            border: 1px dotted #000;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            z-index: 1;
+        }
+
+        .trackThree {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+
+        .trackOne,
+        .trackThree {
+            border: 1px solid #000;
+        }
+
+        .trackOne,
+        .trackTwo,
+        .trackThree {
+            border-radius: 5%;
+        }
+
+        .trackOne img {
+            position: relative;
+            width: 100px;
+            border-radius: 30px;
+            padding: 5px;
+            z-index: 9;
+            animation: moveCar 15s;
+        }
+
+        @keyframes moveCar {
+            0% {
+                top: 0px;
+                left: -15px;
+            }
+
+            25% {
+                top: 0px;
+                left: 415px;
+            }
+
+            50% {
+                top: 350px;
+                left: 420px;
+            }
+
+            75% {
+                top: 350px;
+                left: -20px;
+            }
+
+            100% {
+                top: 0px;
+                left: -20px;
+                /* rotate: 270deg; */
+            }
+
+
+        }
+
+        @keyframes tranCar {
+            0% {
+                top: 0px;
+                left: -15px;
+            }
+
+            25% {
+                top: 0px;
+                left: 415px;
+            }
+
+            50% {
+                top: 350px;
+                left: 420px;
+            }
+
+            75% {
+                top: 350px;
+                left: -20px;
+            }
+
+            100% {
+                top: 0px;
+                left: -20px;
+                /* rotate: 270deg; */
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="track">
+        <div class="trackOne">
+            <img src="./images/car.jpg" alt="">
+            <div class="trackTwo">
+                <div class="trackThree">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
